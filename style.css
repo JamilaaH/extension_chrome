@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'clash';
+  src: url('fonts/ClashDisplay-Regular.otf');
+}
+@font-face {
+  font-family: 'bold';
+  src: url('fonts/ClashDisplay-Bold.otf');
+}
+body {
+  width: 400px;
+  height: 500px;
+  color: white;
+  background-image: url('img/fond.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'clash';
+  background-color: black;
+  margin: 0%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titre {
+  font-family: 'bold';
+  font-size:20px;
+}
+.body {
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+span, .reseaux {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+a {
+  font-size: 15px;
+  color: white;
+}
+.logo {
+  width: 35%;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul > li {
+  margin: 0 10px;
+  transition: 2s;
+}
+
+ul > li :hover {
+  color: grey;
+}
+
+#image {
+  width: 75%;
+  border: 0.5px white solid;
+  margin: 0 auto;
+  display: none;
+}
