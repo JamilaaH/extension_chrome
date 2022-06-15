@@ -13,10 +13,9 @@ const headers = {
     'Authorization' : `Bearer ${token}` ,
     'Client-ID' : ClientID
 };
-
-let isLiveOn = false
-const cb = function(json) {   
-    if(json.data.length  && !isLiveOn) {  
+var isLiveOn = false;
+const cb = function(json) {  
+    if(json.data.length) {  
         chrome.action.setIcon({ path: {"128": "img/live_on.png"}});
         chrome.notifications.create('LiveOn', {
             imageUrl: "img/live.png",
@@ -25,10 +24,8 @@ const cb = function(json) {
             message: 'Rejoins le live dès maintenant !',
             type: 'image'
         });
-        isLiveOn = true;
     } else  {
         chrome.action.setIcon({ path: {"128": "img/logo.png"}});
-        isLiveOn = false;
     }
 }
 

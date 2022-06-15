@@ -17,10 +17,8 @@ const headers = {
     'Authorization' : `Bearer ${token}` ,
     'Client-ID' : ClientID
 };
-console.log('yo');
 
 const cb = function(json) {   
-    console.log(json.data);
     if(json.data == 0 ) {
         img.setAttribute('src', 'img/offline.png')
         info.innerHTML = 'Nous ne sommes pas en live'
