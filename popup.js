@@ -11,6 +11,7 @@ const url = `https://api.twitch.tv/helix/streams?user_id=${userId}`;
 const info = document.getElementById('info');
 const detail = document.getElementById('details');
 const img = document.getElementById('image');
+const titre = document.getElementById('titre');
 
 //hearders - autorisation
 const headers = {
@@ -23,10 +24,13 @@ const cb = function(json) {
         img.setAttribute('src', 'img/offline.png')
         info.innerHTML = 'Nous ne sommes pas en live'
         detail.innerHTML = 'Voir notre dernière vidéo'
+        titre.innerHTML = ""
     } else { 
+        console.log(json.data[0].title);
         img.setAttribute('src', 'img/live.png')
         info.innerHTML = 'Yume Squad est en live '
         detail.innerHTML = '<i class="fa-solid fa-gamepad" style="font-size:12px"></i>'+" " + json.data[0].game_name
+        titre.innerHTML = json.data[0].title
     }
 }
 
