@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Yume Squad",
     "description": "Soyez au courant des lives Twitch",
-    "version": "1.0",
+    "version": "1.5",
     "icons": {
         "128" : "img/logo.png"
     },
